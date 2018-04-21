@@ -1,0 +1,29 @@
+https://bitcoin.stackexchange.com/questions/19893/how-to-send-bitcoin-with-a-message-attached
+
+"The payment protocol (see BIP 70-72) will support attaching messages to transactions.
+
+Note that these messages do not end up in the blockchain, which is the right way to do it, as they are private information between sender and receiver - no need to make the entire world replicate it."
+
+Can we get this in the PIVX wallet? It will significantly help merchants with payments in environments that aren't naturally secure.
+
+"Send 15 PIV with the message 'hoodie' to (PIV address or QR code) with your shipping address and you'll get 15% off!"
+
+Something like that. It reminds of automatic texting applications that used to be popular in....like 2005. (Ask cha cha execpt you send a payment with it and get pizza)
+
+This proposal has also been sent to the NAV community. You can track their progress using the following link:
+
+https://github.com/Encrypt-S/NavPay/issues/161
+
+A comment made by Prole on the NAV discord:
+So effectively, the merchant specifies a URL that NavPay would query over TCP like
+https://mystore.com/validate-discount-code?discountCode=NAVCOIN_RULES
+and all NavPay would do is send the query and the merchant has to handle the rest
+and then once it responds, navpay can make the payment
+through the normal sending api to the navpay back end
+the merchant site would need to respond with data we know something to do with like reduce the payment amount by X %
+and we update the send amount
+and make the payment
+
+It should be noted that the messages should be encrypted and decrypted inside of the wallet app for privacy reasons.
+
+Feel free to ask questions as I will be active on this issue.
